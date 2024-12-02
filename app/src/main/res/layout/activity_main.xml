@@ -1,0 +1,67 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Tool Panel -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/clearButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Clear"
+                android:background="#FF0000" />
+
+            <Button
+                android:id="@+id/brushSizeButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Brush Size"
+                android:background="#00FF00" />
+
+            <Button
+                android:id="@+id/colorPickerButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Color Picker"
+                android:background="#0000FF" />
+
+        </LinearLayout>
+
+        <!-- Opacity Slider -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Opacity"
+            android:layout_marginTop="8dp" />
+
+        <SeekBar
+            android:id="@+id/opacitySeekBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:max="100"
+            android:progress="100" />
+    </LinearLayout>
+
+    <!-- Doodle Canvas -->
+    <com.example.doodleapp.DoodleView
+        android:id="@+id/doodleView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFF00" />
+</LinearLayout>
